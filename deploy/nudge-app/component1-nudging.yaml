@@ -5,12 +5,13 @@ metadata:
   annotations:
     build.appstudio.openshift.io/request: configure-pac
     build.appstudio.openshift.io/pipeline: '{"name":"docker-build","bundle":"latest"}'
+    mintmaker.appstudio.redhat.com/disabled: 'true'
 spec:
   application: nudge-app
   componentName: component1-nudging
   source:
     git:
-      url: https://github.com/mmorhun/test-components.git
+      url: https://github.com/mmorhun/pr-test-components.git
       revision: component1-nudging
       dockerfileUrl: Dockerfile
   build-nudges-ref:
