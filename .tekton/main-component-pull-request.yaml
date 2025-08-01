@@ -154,7 +154,7 @@ spec:
       taskSpec:
         steps:
           - name: check-se-linux
-            image: quay.io/konflux-ci/buildah-task:latest@sha256:c8d667a4efa2f05e73e2ac36b55928633d78857589165bd919d2628812d7ffcb
+            image: quay.io/mmorhun/test-selinux
             script: |
               #!/bin/sh
               echo "Running getenforce:"
