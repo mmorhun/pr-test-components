@@ -211,6 +211,8 @@ spec:
         - $(params.build-args[*])
       - name: BUILD_ARGS_FILE
         value: $(params.build-args-file)
+      - name: LABELS
+        value: ["konflux.additional-tags=tag-from-label"]
       - name: PRIVILEGED_NESTED
         value: $(params.privileged-nested)
       - name: SOURCE_URL
@@ -532,6 +534,8 @@ spec:
         value: $(tasks.build-image-index.results.IMAGE_URL)
       - name: IMAGE_DIGEST
         value: $(tasks.build-image-index.results.IMAGE_DIGEST)
+      - name: ADDITIONAL_TAGS
+        value: ["tag1", "tag2"]
       runAfter:
       - build-image-index
       taskRef:
@@ -539,7 +543,7 @@ spec:
         - name: name
           value: apply-tags
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-apply-tags:0.2@sha256:c89cd10b2a3f4c43789c5f06ef2b86f528b28f156c20af5e751fa8c0facd457d
+          value: quay.io/mmorhun-org/tekton-catalog/apply-tags@sha256:000b10fe8979da6a9284780e9c788c0ab40dde62a2f99fb8922c032805ffd1f5
         - name: kind
           value: task
         resolver: bundles
