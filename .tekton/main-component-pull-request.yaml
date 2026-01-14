@@ -543,7 +543,7 @@ spec:
         - name: name
           value: apply-tags
         - name: bundle
-          value: quay.io/mmorhun-org/tekton-catalog/apply-tags@sha256:000b10fe8979da6a9284780e9c788c0ab40dde62a2f99fb8922c032805ffd1f5
+          value: quay.io/mmorhun-org/tekton-catalog/apply-tags@sha256:e52804b77bdb5383d76799c0b21f5d589a08ee8b2dec5c1cfe1b2dcb1b4f12d4
         - name: kind
           value: task
         resolver: bundles
