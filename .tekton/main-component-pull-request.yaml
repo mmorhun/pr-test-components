@@ -23,19 +23,19 @@ spec:
     - name: apply-tags
       params:
       - name: IMAGE_URL
-        value: mmorhun-org/rhacs-eng/konflux-tasks
+        value: quay.io/redhat-user-workloads/mmorhun-tenant/main-component:test-unknown
       - name: IMAGE_DIGEST
-        value: sha256:4e663dda5f1e170542fc5d4632a6d35940a07c0b3e1a31797df4d7217b3f2f3c
+        value: sha256:39d176ed46745dd18f817ecb538ad6b93c16856a3719604cc75bf4646c508548
       - name: ADDITIONAL_TAGS
         value: ["new-tag"]
-      runAfter:
-      - build-image-index
+      - name: LOG_LEVEL
+        value: debug
       taskRef:
         params:
         - name: name
           value: apply-tags
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-apply-tags:0.3@sha256:510b6d2a3b188adeb716e49566b57d611ab36bd69a2794b5ddfc11dbf014c2ca
+          value: quay.io/mmorhun-org/tekton-catalog/apply-tags@sha256:e9f1e812b17725a3e3efea6441d7df89dec1e6e09099ddebcad26fd1f6664b4c
         - name: kind
           value: task
         resolver: bundles
