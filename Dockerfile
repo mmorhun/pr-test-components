@@ -1,11 +1,13 @@
 FROM registry.access.redhat.com/ubi9/go-toolset:1.22.9-1738267444
 
-COPY . .
-RUN go mod download
+USER 0
+RUN groupadd myusergroup && \
+    useradd -u 1000 -g myusergroup -s /bin/sh -d /home/myuser myuser && \
+    chown -R 1000:myusergroup /home/myuser && \
+    chmod -R 770 /home/myuser
 
-RUN go build -buildvcs=false -o ./main
+USER 1000
+ENV HOME=/home/myuser
+RUN mkdir -p $HOME/test/subdir
 
-ENV PORT 8081
-EXPOSE 8081
-
-CMD [ "./main" ]
+CMD ["ls"]
