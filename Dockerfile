@@ -6,7 +6,7 @@ RUN groupadd myusergroup && \
     chown -R 1000:myusergroup /home/myuser && \
     chmod -R 770 /home/myuser
 
-USER 1000
+USER myuser
 ENV HOME=/home/myuser
 RUN mkdir -p $HOME/test/subdir
 
