@@ -467,7 +467,7 @@ spec:
         - name: name
           value: coverity-availability-check
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-coverity-availability-check:0.2@sha256:267d5bc069a0323f41e24732ddfd1057e5c639e853d1e620c67505fab78f1301
+          value: quay.io/konflux-ci/tekton-catalog/task-coverity-availability-check:0.2@sha256:8b501440a960aec446db2ebc6625a49d0317a9fc7bf0f7bd9b18cb63052db7de
         - name: kind
           value: task
         resolver: bundles
@@ -539,7 +539,7 @@ spec:
         - name: name
           value: apply-tags
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-apply-tags:0.3@sha256:510b6d2a3b188adeb716e49566b57d611ab36bd69a2794b5ddfc11dbf014c2ca
+          value: quay.io/konflux-ci/tekton-catalog/task-apply-tags:0.3.1@sha256:c177fc2b2482b1299e713c51bf258eba4972c016ef260d9f45335c2550dc7b2b
         - name: kind
           value: task
         resolver: bundles
@@ -560,7 +560,7 @@ spec:
         - name: name
           value: push-dockerfile
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-push-dockerfile:0.1@sha256:74e982c07a808eaa5b1d8c126cafcbf3cc6ce94c883cf0845b55ce8064674b45
+          value: quay.io/konflux-ci/tekton-catalog/task-push-dockerfile:0.3.1@sha256:7c7d96eca3832f20f873740a4d9cc248efa1c5cfc11b4fb886d5d7183fd1f548
         - name: kind
           value: task
         resolver: bundles
